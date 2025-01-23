@@ -3,21 +3,21 @@ function showDetails(option) {
     const modalText = document.getElementById("modal-text");
 
     if (option === "interactivos") {
-        modalImage.src = "Images/interactivos.jpg";
+        modalImage.src = "./Images/interactivos.jpg";
         modalImage.alt = "Gráficas y mapas interactivos";
         modalText.innerHTML = `
             <h2>Gráficas y Mapas Interactivos</h2>
             <p>Disfruta de gráficas y mapas dinámicos para analizar el clima en tiempo real.</p>
         `;
     } else if (option === "accesibilidad") {
-        modalImage.src = "Images/accesibilidad.jpg";
+        modalImage.src = "./Images/accesibilidad.jpg";
         modalImage.alt = "Accesibilidad intuitiva";
         modalText.innerHTML = `
             <h2>Accesibilidad Intuitiva</h2>
             <p>Navega fácilmente con una interfaz diseñada para todos los usuarios.</p>
         `;
     } else if (option === "actualizada") {
-        modalImage.src = "Images/actualizada.jpg";
+        modalImage.src = "./Images/actualizada.jpg";
         modalImage.alt = "Información actualizada";
         modalText.innerHTML = `
             <h2>Información Actualizada</h2>
