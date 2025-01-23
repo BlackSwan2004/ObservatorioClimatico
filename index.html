@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatorio Climático Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class= "title" >OBSERVATORIO CLIMÁTICO WEB</h1>
+            <h2 class="subtitle">El planeta cambia, pero juntos podemos salvarlo</h2>
+            <br>
+            <br>
+            <button class="cta" onclick="window.location.href='prueba.html'">EMPEZAR AHORA</button>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>¿QUÉ ES EL OBSERVATORIO CLIMÁTICO?</h2>
+        <p>El Observatorio Climático Web es una plataforma interactiva que te invita a explorar los impactos del cambio climático de manera visual y dinámica. A través de gráficos y mapas, podrás ver cómo fenómenos como el aumento de temperaturas globales, la pérdida de glaciares y la deforestación están afectando a nuestro planeta. Con datos confiables y fáciles de entender, esta herramienta está diseñada para inspirarte a tomar acción y ser parte del cambio.</p>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mission">
+            <div class="mission-title">MISION</div>
+            <div class="mission-circle">Sensibilizar y educar a la población sobre los impactos del cambio climático mediante una plataforma web accesible, confiable y visualmente atractiva.</div>
+        </div>
+        <div class="vision">
+            <div class="vision-title">VISION</div>
+            <div class="vision-circle">Convertirse en una herramienta educativa que facilite el aprendizaje y la concienciación ambiental.</div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <h2>¿POR QUÉ ELEGIR NUESTRO OBSERVATORIO?</h2>
+        <ul>
+            <li onclick="showDetails('interactivos')">Gráficas y mapas interactivos</li>
+            <li onclick="showDetails('accesibilidad')">Accesibilidad intuitiva</li>
+            <li onclick="showDetails('actualizada')">Información actualizada</li>
+        </ul>
+        <div id="details-container" class="details">
+        </div>
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-details">
+                <img id="modal-image" src="" alt="">
+                <div id="modal-text"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="images/temperatura.jpg" alt="Medición de temperaturas">
+            <div class="description">
+                Medición de temperaturas: Monitorea los cambios térmicos en el ambiente.
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/desglaciares.jpg" alt="Desertificación y desglaciares">
+            <div class="description">
+                Desertificación y desglaciares: Impacto del cambio climático en el hielo.
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/nivel-mar.jpg" alt="Nivel del mar">
+            <div class="description">
+                Nivel del mar: Observa cómo el nivel del agua está cambiando globalmente.
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/deforestacion.jpg" alt="Deforestación global">
+            <div class="description">
+                Deforestación global: Los efectos de la tala de bosques en el clima.
+            </div>
+        </div>
+    </div>
+    
+
+    <section class="join">
+        <h2>¡ÚNETE A LA CAUSA!</h2>
+        <button class="cta">COMPARTIR AHORA</button>
+    </section>
+
+    <footer>
+        <p>INFORMACIÓN CLIMÁTICA PARA TODOS. ACCESIBLE, EDUCATIVA Y BASADA EN CIENCIA.</p>
+        <p>Fuentes confiables: NASA | IPCC | WWF</p>
+    </footer>
+</body>
+</html>   

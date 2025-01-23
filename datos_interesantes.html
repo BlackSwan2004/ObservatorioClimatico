@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Interesantes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: rgb(250, 250, 250);
+        }
+        h1 {
+            color: #597b5e;
+        }
+        p {
+            color: #000000;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .fila {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .rectangulo {
+            width: 350px;
+            height: 100px;
+            background-color: #597b5e;
+            color: white;
+            line-height: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .rectangulo:hover {
+            background-color: #45a049;
+        }
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos Interesantes</h1>
+    <p>Explora algunos de los problemas ambientales más críticos que enfrenta nuestro planeta hoy en día.</p>
+
+    <div class="container">
+        <div class="rectangulo" onclick="mostrarDatos('nivel_mar')">Aumento del nivel del mar</div>
+        <div class="rectangulo" onclick="mostrarDatos('deforestacion')">Deforestación</div>
+        <div class="rectangulo" onclick="mostrarDatos('glaciares')">Derretimiento</div>
+        <div class="rectangulo" onclick="mostrarDatos('otros')">Otros problemas</div>
+    </div>
+
+    <iframe id="paginaDatos"></iframe>
+
+    <script>
+        function mostrarDatos(tipo) {
+            const iframe = document.getElementById('paginaDatos');
+            iframe.src = 'datos.html?tipo=' + tipo;  // Pasamos el tipo como parámetro en la URL
+            iframe.style.display = 'block';
+        }
+
+        function cerrarIframe() {
+            const iframe = document.getElementById('paginaDatos');
+            iframe.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+

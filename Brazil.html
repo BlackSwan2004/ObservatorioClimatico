@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos del País</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 2.5em;
+        }
+        .videos-section {
+            display: flex;
+            width: 1450px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .video-item {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .problems{
+            display: flex;
+            width: 1465px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .problem-block {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        .info-rectangles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info, .links {
+            background-color: #2C3E50;
+            color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .links {
+            background-color: #39398f;
+            padding: 30px;
+        }
+        .menu-vertical {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #2C3E50;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .menu-vertical:hover {
+            width: 600px;
+        }
+        .menu-contenido {
+            display: none;
+            padding: 20px;
+            background-color:rgb(129, 153, 174);
+            height: 100%;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-vertical:hover .menu-contenido {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Problemas Climáticos del País
+    </header>
+
+    <section class="videos-section">
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6216.820884382973!2d-41.44249011044587!3d-11.205972927204414!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737579785445!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Temperatura</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d125690.69257979255!2d-45.368833599473525!3d-11.277772400342135!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737579676032!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Deforestacion</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d332899.4021358463!2d-50.210277603484705!3d0.13329652346960433!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737580360937!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Aumento del nivel del mar</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d23131.8322589949!2d-48.15570543230007!3d-13.508092134827693!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737580483811!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Derretimiento de glaciares</h3>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">La temperatura promedio en Brasil ha aumentado alrededor de 1.2 °C desde 1960.</div>
+                <div class="info">Las olas de calor se han intensificado, afectando principalmente a las grandes ciudades.</div>
+                <div class="info">La región del Amazonas está experimentando un aumento de temperaturas más rápido que otras áreas.</div>
+                <div class="info">El calor extremo está impactando la productividad agrícola y la salud humana.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Brasil lidera la deforestación mundial, especialmente en la Amazonía.</div>
+                <div class="info">La tala ilegal y la expansión de la agroindustria son las principales causas.</div>
+                <div class="info">La pérdida de bosques amenaza especies únicas y la biodiversidad del Amazonas.</div>
+                <div class="info">La deforestación contribuye a la liberación de millones de toneladas de CO₂.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">El nivel del mar está aumentando en promedio 3-4 mm por año en las costas brasileñas.</div>
+                <div class="info">Ciudades costeras como Río de Janeiro y Recife enfrentan inundaciones frecuentes.</div>
+                <div class="info">La erosión costera pone en riesgo viviendas y turismo en áreas populares.</div>
+                <div class="info">Los manglares, que protegen las costas, están en peligro debido al aumento del nivel del mar.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Aunque Brasil no tiene glaciares, es afectado indirectamente por el deshielo en la Cordillera de los Andes.</div>
+                <div class="info">El derretimiento afecta los patrones hídricos en regiones vecinas, alterando el suministro de agua.</div>
+                <div class="info">Brasil depende de sistemas fluviales alimentados por los Andes, como el Amazonas.</div>
+                <div class="info">La reducción de glaciares afecta la biodiversidad y los ecosistemas conectados al río Amazonas.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-vertical">
+        <div class="menu-contenido">
+            <h2>Datos Interesantes</h2>
+            <p>
+                El cambio climático afecta a todos los ecosistemas del mundo, con consecuencias graves para la biodiversidad y las comunidades humanas.
+            </p>
+            <img src="images/temperatura.jpg" alt="Imagen representativa de cambio climático" style="width: 55%; border-radius: 15px; margin-top: 15px;">
+            <p>
+                La deforestación contribuye a más del 20% de las emisiones globales de CO2.
+            </p>
+        </div>
+    </div>
+    
+      <div id="ia-container" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; max-width: 300px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0;">Datos Curiosos de Brasil</h3>
+          <span id="close-ia" style="cursor: pointer; font-size: 18px; font-weight: bold; color: white;">&times;</span>
+        </div>
+        <p id="ia-content" style="font-size: 16px; margin-top: 10px;"></p>
+      </div>
+      
+      <script>
+        async function loadCuriosities(country) {
+          const response = await fetch('datos4.json'); // Asegúrate de que este archivo esté en el mismo directorio
+          const data = await response.json();
+          const curiosities = data[country]?.curiosities || [];
+      
+          const iaContainer = document.getElementById('ia-container');
+          const iaContent = document.getElementById('ia-content');
+          let currentIndex = 0;
+      
+          function showNextCuriosity() {
+            iaContent.textContent = curiosities[currentIndex]; // Muestra el dato actual
+            currentIndex = (currentIndex + 1) % curiosities.length; // Pasa al siguiente dato (cíclico)
+          }
+      
+          // Muestra el primer dato de inmediato
+          if (curiosities.length > 0) {
+            showNextCuriosity();
+            const intervalId = setInterval(showNextCuriosity, 5000); // Cambia cada 5 segundos
+      
+            // Maneja el cierre del contenedor
+            const closeButton = document.getElementById('close-ia');
+            closeButton.addEventListener('click', function () {
+              iaContainer.style.display = 'none'; // Oculta el contenedor
+              clearInterval(intervalId); // Detiene la secuencia de datos
+            });
+          }
+        }
+      
+        // Llama la función cuando cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+          loadCuriosities('Brasil');
+        });
+      </script>
+              
+</body>
+</html>

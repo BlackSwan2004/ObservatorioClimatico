@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces - Observatorio Climático</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F2F0EB;
+            color: #004d40;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px auto;
+            width: 80%;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+        }
+        .image-box {
+            position: relative;
+            border: 2px solid #004d40;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .image-box .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 77, 64, 0.8);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.2em;
+        }
+        .details-box {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #597b5e;
+            color: #FFFFFF;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .general-info {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #004d40;
+            border-radius: 5px;
+            background-color: #e3f2fd;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #004d40;
+        }
+        .link-section {
+            margin-bottom: 30px;
+            text-align: center;
+            margin-left: -9mm;
+        }
+        .link-section p {
+            margin: 7px auto;
+            font-size: 1em;
+            width: 60%;
+        }
+        .details-box h2 {
+            margin-bottom: 30px;
+        }
+        .year {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enlaces</h1>
+        <div class="general-info">
+            <p>Bienvenido al Observatorio Climático. Aquí encontrarás enlaces y recursos sobre los principales problemas ambientales, como el aumento de la temperatura, la deforestación, el derretimiento de glaciares y el aumento del nivel del mar. Haz clic en las imágenes para obtener más detalles y enlaces a recursos relevantes.</p>
+        </div>
+        <div class="grid">
+            <div class="image-box" onclick="toggleDetalles(1)">
+                <img src="images/temperatura.jpg" alt="Temperatura">
+                <div class="overlay">Temperatura</div>
+                <div class="details-box" id="details-1">
+                    <span class="close-btn" onclick="toggleDetalles(1)">&times;</span>
+                    <div class="link-section">
+                        <p><span class="news-title">La NASA confirma que 2024 fue el año más cálido registrado</span>: <a href="https://www.nasa.gov/news-release/temperatures-rising-nasa-confirms-2024-warmest-year-on-record/">Leer más</a></p>
+                        <p><span class="news-title">El 2025 se perfila ya entre los tres más cálidos de la historia según primeros estudios</span>: <a href="https://www.eltiempo.es/noticias/el-2025-se-perfila-ya-entre-los-tres-mas-calidos-de-la-historia-segun-primeros-estudios">Leer más</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box" onclick="toggleDetalles(2)">
+                <img src="images/deforestacion.jpg" alt="Deforestación">
+                <div class="overlay">Deforestación</div>
+                <div class="details-box" id="details-2">
+                    <span class="close-btn" onclick="toggleDetalles(2)">&times;</span>
+                    <div class="link-section">
+                        <p><span class="news-title">2024: Un año de esperanza y desafíos para los bosques del mundo</span>: <a href="https://forestsnews.cifor.org/90652/2024-un-ano-de-esperanza-y-desafios-para-los-bosques-del-mundo?fnl=en">Leer más</a></p>
+                        <p><span class="news-title">Los devastadores impactos de la deforestación en Colombia</span>: <a href="https://www.wwf.org.ec/?386550/deforestacion-colombia-causas-consecuencias">Leer más</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box" onclick="toggleDetalles(3)">
+                <img src="images/desglaciares.jpg" alt="Derretimiento de glaciares">
+                <div class="overlay">Derretimiento de glaciares</div>
+                <div class="details-box" id="details-3">
+                    <span class="close-btn" onclick="toggleDetalles(3)">&times;</span>
+                    <div class="link-section">
+                        <p><span class="news-title">Glaciares sufrieron la mayor pérdida de masa en 50 años</span>: <a href="https://www.dw.com/es/el-cambio-clim%C3%A1tico-causa-en-los-glaciares-su-mayor-perdida-de-masa-en-medio-siglo/a-70424426">Leer más</a></p>
+                        <p><span class="news-title">Los ríos tienen sed: el ciclo del agua es ahora más irregular e impredecible</span>: <a href="https://news.un.org/es/story/2024/10/1533301">Leer más</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box" onclick="toggleDetalles(4)">
+                <img src="images/nivel-mar.jpg" alt="Aumento del nivel del mar">
+                <div class="overlay">Aumento del nivel del mar</div>
+                <div class="details-box" id="details-4">
+                    <span class="close-btn" onclick="toggleDetalles(4)">&times;</span>
+                    <div class="link-section">
+                        <p><span class="news-title">Científicos identifican un nuevo "punto de inflexión" en la capa de hielo de la Antártida y advierten que puede que se esté subestimando el futuro aumento de nivel del mar</span>: <a href="https://cnnespanol.cnn.com/2024/06/25/capa-hielo-antartida-punto-de-inflexion-trax">Leer más</a></p>
+                        <p><span class="news-title">Detectaron en la Antártida un ciclo de deshielo oculto que podría acelerar el aumento del nivel del mar</span>: <a href="https://www.infobae.com/america/medio-ambiente/2023/10/31/detectaron-en-la-antartida-un-ciclo-de-deshielo-oculto-que-acelera-el-aumento-del-nivel-del-mar/">Leer más</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetalles(id) {
+            var detailsBox = document.getElementById('details-' + id);
+            var isVisible = detailsBox.style.display === 'block';
+            var allDetails = document.querySelectorAll('.details-box');
+            
+            allDetails.forEach(box => box.style.display = 'none');
+            
+            if (!isVisible) {
+                detailsBox.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

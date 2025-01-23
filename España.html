@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos del País</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 2.5em;
+        }
+        .videos-section {
+            display: flex;
+            width: 1450px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .video-item {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .problems{
+            display: flex;
+            width: 1465px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .problem-block {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        .info-rectangles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info, .links {
+            background-color: #2C3E50;
+            color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .links {
+            background-color: #39398f;
+            padding: 30px;
+        }
+        .menu-vertical {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #2C3E50;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .menu-vertical:hover {
+            width: 600px;
+        }
+        .menu-contenido {
+            display: none;
+            padding: 20px;
+            background-color:rgb(129, 153, 174);
+            height: 100%;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-vertical:hover .menu-contenido {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Problemas Climáticos del País
+    </header>
+
+    <section class="videos-section">
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d7433.280783304206!2d-2.738594611223913!3d39.664280109225594!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737580616101!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Temperatura</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d4356.591412004123!2d-3.2964305905204565!3d39.361655848378994!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737581181564!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Deforestacion</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53455.64905077783!2d-4.92591710966689!3d43.18674155149439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737581474653!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+               loading="lazy">
+            </iframe>
+            <h3>Aumento del nivel del mar</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d47243.021335849575!2d-8.284527117207816!3d43.393642468680255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737581635453!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Derretimiento de glaciares</h3>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">La temperatura media en España ha aumentado aproximadamente 1.7 °C desde 1960</div>
+                <div class="info">Las olas de calor son más intensas y frecuentes, especialmente en verano.</div>
+                <div class="info">Las temperaturas extremas afectan la agricultura, especialmente en cultivos como olivos y viñedos.</div>
+                <div class="info">Las zonas urbanas, como Madrid, experimentan un efecto "isla de calor" más pronunciado.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Aunque España ha aumentado la superficie forestal en las últimas décadas, la deforestación local sigue siendo un problema en algunas áreas.</div>
+                <div class="info">Los incendios forestales son una de las principales causas de pérdida de bosques.</div>
+                <div class="info">La expansión agrícola y urbanística también contribuye a la deforestación.</div>
+                <div class="info">La pérdida de bosques afecta especies endémicas y la biodiversidad.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">El nivel del mar en las costas españolas está aumentando alrededor de 3 mm por año.</div>
+                <div class="info">Zonas como el Delta del Ebro y Doñana son especialmente vulnerables a inundaciones.</div>
+                <div class="info">Ciudades costeras como Barcelona y Valencia enfrentan problemas de erosión y salinización.</div>
+                <div class="info">El aumento del nivel del mar amenaza infraestructuras turísticas y económicas en la costa mediterránea.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">España tiene glaciares en los Pirineos, que están desapareciendo rápidamente debido al cambio climático.</div>
+                <div class="info">Se estima que los pocos glaciares restantes podrían desaparecer en las próximas décadas.</div>
+                <div class="info">El derretimiento afecta el suministro de agua en zonas montañosas y cercanas.</div>
+                <div class="info">La desaparición de glaciares impacta ecosistemas frágiles de alta montaña.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-vertical">
+        <div class="menu-contenido">
+            <h2>Datos Interesantes</h2>
+            <p>
+                El cambio climático afecta a todos los ecosistemas del mundo, con consecuencias graves para la biodiversidad y las comunidades humanas.
+            </p>
+            <img src="images/temperatura.jpg" alt="Imagen representativa de cambio climático" style="width: 55%; border-radius: 15px; margin-top: 15px;">
+            <p>
+                La deforestación contribuye a más del 20% de las emisiones globales de CO2.
+            </p>
+        </div>
+    </div>
+    
+      <div id="ia-container" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; max-width: 300px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0;">Datos Curiosos de España</h3>
+          <span id="close-ia" style="cursor: pointer; font-size: 18px; font-weight: bold; color: white;">&times;</span>
+        </div>
+        <p id="ia-content" style="font-size: 16px; margin-top: 10px;"></p>
+      </div>
+      
+      <script>
+        async function loadCuriosities(country) {
+          const response = await fetch('datos7.json'); // Asegúrate de que este archivo esté en el mismo directorio
+          const data = await response.json();
+          const curiosities = data[country]?.curiosities || [];
+      
+          const iaContainer = document.getElementById('ia-container');
+          const iaContent = document.getElementById('ia-content');
+          let currentIndex = 0;
+      
+          function showNextCuriosity() {
+            iaContent.textContent = curiosities[currentIndex]; // Muestra el dato actual
+            currentIndex = (currentIndex + 1) % curiosities.length; // Pasa al siguiente dato (cíclico)
+          }
+      
+          // Muestra el primer dato de inmediato
+          if (curiosities.length > 0) {
+            showNextCuriosity();
+            const intervalId = setInterval(showNextCuriosity, 5000); // Cambia cada 5 segundos
+      
+            // Maneja el cierre del contenedor
+            const closeButton = document.getElementById('close-ia');
+            closeButton.addEventListener('click', function () {
+              iaContainer.style.display = 'none'; // Oculta el contenedor
+              clearInterval(intervalId); // Detiene la secuencia de datos
+            });
+          }
+        }
+      
+        // Llama la función cuando cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+          loadCuriosities('España');
+        });
+      </script>
+              
+</body>
+</html>

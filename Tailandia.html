@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos del País</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 2.5em;
+        }
+        .videos-section {
+            display: flex;
+            width: 1450px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .video-item {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .problems{
+            display: flex;
+            width: 1465px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .problem-block {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        .info-rectangles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info, .links {
+            background-color: #2C3E50;
+            color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .links {
+            background-color: #39398f;
+            padding: 30px;
+        }
+        .menu-vertical {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #2C3E50;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .menu-vertical:hover {
+            width: 600px;
+        }
+        .menu-contenido {
+            display: none;
+            padding: 20px;
+            background-color:rgb(129, 153, 174);
+            height: 100%;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-vertical:hover .menu-contenido {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Problemas Climáticos del País
+    </header>
+
+    <section class="videos-section">
+        <div class="video-item">
+            <iframe 
+               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3767.755365635292!2d101.55563338264808!3d15.033681833078637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737585238986!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+               loading="lazy">
+            </iframe>
+            <h3>Temperatura</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1966.3487535889856!2d101.55078784531094!3d14.950007235116972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737585326560!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Deforestacion</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26174.486569684468!2d100.5952534944362!3d13.517036685975429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737585673310!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Aumento del nivel del mar</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d24147.355605548906!2d101.09562677894478!3d13.246442989991374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737585909749!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Derretimiento de glaciares</h3>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">La temperatura promedio en Tailandia ha aumentado aproximadamente 1 °C en los últimos 50 años.</div>
+                <div class="info">Las olas de calor son más intensas y frecuentes, especialmente en las áreas del norte y noreste.</div>
+                <div class="info">Las temperaturas extremas afectan la agricultura, particularmente los cultivos de arroz y caucho.</div>
+                <div class="info">Las temperaturas más altas aumentan la demanda de agua, poniendo presión sobre los recursos hídricos del país.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Tailandia ha perdido una gran parte de su cobertura forestal debido a la tala ilegal y la expansión de la agricultura.</div>
+                <div class="info">La deforestación ha afectado principalmente las regiones montañosas del norte y centro del país.</div>
+                <div class="info">La agricultura de cultivos comerciales como el arroz, el caucho y la palma de aceite es una de las principales causas.</div>
+                <div class="info">Los incendios forestales, especialmente en el norte, contribuyen a la pérdida de bosques</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Tailandia está experimentando un aumento del nivel del mar de alrededor de 3 mm por año.</div>
+                <div class="info">Las costas del país, especialmente en Bangkok y en el delta del río Chao Phraya, son vulnerables a las inundaciones y la erosión.</div>
+                <div class="info">Las áreas bajas, como las islas del Golfo de Tailandia, están perdiendo terreno debido a la subida del mar y la intrusión salina.</div>
+                <div class="info">El aumento del nivel del mar amenaza la agricultura en las zonas costeras, especialmente los cultivos de arroz y la pesca.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Aunque Tailandia no tiene glaciares, el derretimiento en el Himalaya y otras regiones afecta los patrones climáticos que impactan al país.</div>
+                <div class="info">El deshielo en el Himalaya afecta el caudal de los ríos que provienen de las montañas, cruciales para la agricultura y el consumo humano.</div>
+                <div class="info">El derretimiento de los glaciares contribuye al aumento global del nivel del mar, lo que afecta las costas tailandesas.</div>
+                <div class="info">La alteración de los patrones de precipitación debido al cambio climático también se ve influenciada por el derretimiento de los glaciares.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-vertical">
+        <div class="menu-contenido">
+            <h2>Datos Interesantes</h2>
+            <p>
+                El cambio climático afecta a todos los ecosistemas del mundo, con consecuencias graves para la biodiversidad y las comunidades humanas.
+            </p>
+            <img src="images/temperatura.jpg" alt="Imagen representativa de cambio climático" style="width: 55%; border-radius: 15px; margin-top: 15px;">
+            <p>
+                La deforestación contribuye a más del 20% de las emisiones globales de CO2.
+            </p>
+        </div>
+    </div>
+    
+      <div id="ia-container" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; max-width: 300px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0;">Datos Curiosos de Tailandia</h3>
+          <span id="close-ia" style="cursor: pointer; font-size: 18px; font-weight: bold; color: white;">&times;</span>
+        </div>
+        <p id="ia-content" style="font-size: 16px; margin-top: 10px;"></p>
+      </div>
+      
+      <script>
+        async function loadCuriosities(country) {
+          const response = await fetch('datos3.json'); // Asegúrate de que este archivo esté en el mismo directorio
+          const data = await response.json();
+          const curiosities = data[country]?.curiosities || [];
+      
+          const iaContainer = document.getElementById('ia-container');
+          const iaContent = document.getElementById('ia-content');
+          let currentIndex = 0;
+      
+          function showNextCuriosity() {
+            iaContent.textContent = curiosities[currentIndex]; // Muestra el dato actual
+            currentIndex = (currentIndex + 1) % curiosities.length; // Pasa al siguiente dato (cíclico)
+          }
+      
+          // Muestra el primer dato de inmediato
+          if (curiosities.length > 0) {
+            showNextCuriosity();
+            const intervalId = setInterval(showNextCuriosity, 5000); // Cambia cada 5 segundos
+      
+            // Maneja el cierre del contenedor
+            const closeButton = document.getElementById('close-ia');
+            closeButton.addEventListener('click', function () {
+              iaContainer.style.display = 'none'; // Oculta el contenedor
+              clearInterval(intervalId); // Detiene la secuencia de datos
+            });
+          }
+        }
+      
+        // Llama la función cuando cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+          loadCuriosities('Tailandia');
+        });
+      </script>
+              
+</body>
+</html>

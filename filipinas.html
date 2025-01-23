@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos del País</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 2.5em;
+        }
+        .videos-section {
+            display: flex;
+            width: 1450px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .video-item {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .problems{
+            display: flex;
+            width: 1465px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .problem-block {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        .info-rectangles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info, .links {
+            background-color: #2C3E50;
+            color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .links {
+            background-color: #39398f;
+            padding: 30px;
+        }
+        .menu-vertical {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #2C3E50;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .menu-vertical:hover {
+            width: 600px;
+        }
+        .menu-contenido {
+            display: none;
+            padding: 20px;
+            background-color:rgb(129, 153, 174);
+            height: 100%;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-vertical:hover .menu-contenido {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Problemas Climáticos del País
+    </header>
+
+    <section class="videos-section">
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62636.15001397169!2d-78.06858780626509!3d-0.32715349237208474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1samazonia%20ecuador!5e1!3m2!1ses!2sec!4v1737256363385!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Temperatura</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12097.55152956096!2d-87.629798!3d41.878114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca1f7c0e08b%3A0x7ff2b5a0e396b2d7!2sChicago%20River%20Walk!5e0!3m2!1ses!2sec!4v1617778222035!5m2!1ses!2sec" 
+                loading="lazy">
+            </iframe>
+            <h3>Deforestacion</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387142.8409263363!2d-74.25986568996465!3d40.69767006304398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5b95f7b53%3A0xd252b291b24db1b4!2sNew%20York!5e0!3m2!1ses!2sec!4v1617778355034!5m2!1ses!2sec" 
+                loading="lazy">
+            </iframe>
+            <h3>Aumento del nivel del mar</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283748.85035297825!2d-76.9904507882905!3d-12.046373005635907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c875dd9c6e5b%3A0x490f4a76cf37ef5c!2sLima!5e0!3m2!1ses!2sec!4v1617778464574!5m2!1ses!2sec" 
+                loading="lazy">
+            </iframe>
+            <h3>Derretimiento de glaciares</h3>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Las temperaturas promedio han aumentado aproximadamente 0.75 °C desde 1951.</div>
+                <div class="info">Las temperaturas más altas afectan la salud pública, especialmente en áreas urbanas como Manila.</div>
+                <div class="info">El cambio en las temperaturas ha alterado los patrones de cultivo, afectando la producción de arroz y otros alimentos básicos.</div>
+                <div class="info">Los tifones, intensificados por el cambio climático, son más devastadores debido al calentamiento del océano.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Filipinas ha perdido más del 70% de sus bosques originales debido a la tala y la agricultura.</div>
+                <div class="info">Entre 2000 y 2020, el país perdió alrededor de 1 millón de hectáreas de cubierta forestal.</div>
+                <div class="info">Las principales causas incluyen la tala ilegal, la expansión agrícola y la urbanización.</div>
+                <div class="info">La deforestación pone en peligro especies endémicas como el águila filipina.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Filipinas experimenta un aumento del nivel del mar de 7-10 mm por año, una de las tasas más rápidas del mundo.</div>
+                <div class="info">Muchas islas bajas están en riesgo de desaparecer, afectando comunidades costeras.</div>
+                <div class="info">La intrusión de agua salada está dañando la agricultura en zonas costeras.</div>
+                <div class="info">Ciudades como Manila enfrentan inundaciones más frecuentes debido al aumento del nivel del mar y la subsidencia del suelo.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Filipinas no tiene glaciares, pero el derretimiento de glaciares en otras partes del mundo contribuye al aumento del nivel del mar que afecta sus costas.</div>
+                <div class="info">Los tifones y tormentas tropicales son más severos debido al calentamiento global impulsado por el deshielo global.</div>
+                <div class="info">La pérdida de glaciares en los Himalayas afecta los patrones climáticos en el sudeste asiático.</div>
+                <div class="info">Filipinas depende de la estabilidad climática global, influenciada por el derretimiento de glaciares.</div>
+                <div class="links">Enlaces</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="menu-vertical">
+        <div class="menu-contenido">
+            <h2>Datos Interesantes</h2>
+            <p>
+                El cambio climático afecta a todos los ecosistemas del mundo, con consecuencias graves para la biodiversidad y las comunidades humanas.
+            </p>
+            <img src="images/temperatura.jpg" alt="Imagen representativa de cambio climático" style="width: 55%; border-radius: 15px; margin-top: 15px;">
+            <p>
+                La deforestación contribuye a más del 20% de las emisiones globales de CO2.
+            </p>
+        </div>
+    </div>
+    
+      <div id="ia-container" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; max-width: 300px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0;">Datos Curiosos de Filipinas</h3>
+          <span id="close-ia" style="cursor: pointer; font-size: 18px; font-weight: bold; color: white;">&times;</span>
+        </div>
+        <p id="ia-content" style="font-size: 16px; margin-top: 10px;"></p>
+      </div>
+      
+      <script>
+        async function loadCuriosities(country) {
+          const response = await fetch('datos5.json'); // Asegúrate de que este archivo esté en el mismo directorio
+          const data = await response.json();
+          const curiosities = data[country]?.curiosities || [];
+      
+          const iaContainer = document.getElementById('ia-container');
+          const iaContent = document.getElementById('ia-content');
+          let currentIndex = 0;
+      
+          function showNextCuriosity() {
+            iaContent.textContent = curiosities[currentIndex]; // Muestra el dato actual
+            currentIndex = (currentIndex + 1) % curiosities.length; // Pasa al siguiente dato (cíclico)
+          }
+      
+          // Muestra el primer dato de inmediato
+          if (curiosities.length > 0) {
+            showNextCuriosity();
+            const intervalId = setInterval(showNextCuriosity, 5000); // Cambia cada 5 segundos
+      
+            // Maneja el cierre del contenedor
+            const closeButton = document.getElementById('close-ia');
+            closeButton.addEventListener('click', function () {
+              iaContainer.style.display = 'none'; // Oculta el contenedor
+              clearInterval(intervalId); // Detiene la secuencia de datos
+            });
+          }
+        }
+      
+        // Llama la función cuando cargue la página
+        document.addEventListener('DOMContentLoaded', function () {
+          loadCuriosities('Filipinas');
+        });
+      </script>
+              
+</body>
+</html>

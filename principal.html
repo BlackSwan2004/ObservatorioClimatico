@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Mundial Interactivo</title>
+  <link href="estilo.css" rel="stylesheet">
+  <script src="https://js.arcgis.com/4.27/"></script>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+
+    #navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1400px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 10px 20px;
+      color: white;
+      z-index: 10;
+    }
+
+    #navbar .menu {
+      display: flex;
+      gap: 325px;
+    }
+
+    #navbar .menu > div {
+      position: relative;
+    }
+    .esri-overlay-surface {
+    display: none !
+    important;
+    }
+    #cesiumContainer canvas {
+    height: 619px !important;
+    }
+
+
+/* Oculta el contenedor de la UI (zoom, brújula, navegación) */
+    .esri-ui {
+    display: none !important;
+  }
+
+/* Oculta la atribución (Powered by Esri y fuentes de datos) */
+    .esri-attribution  {
+    display: none !important;
+
+    }
+
+    #navbar .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    #navbar .menu a:hover {
+      background-color: #000;
+    }
+
+    #navbar .dropdown{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 150px;
+      background-color: #000;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+    #navbar .dropdown a {
+      display: block;
+      padding: 5px 0;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    #navbar .dropdown a:hover {
+      color: #ddd;
+    }
+
+    #navbar .menu > div:hover .dropdown {
+      display: block;
+    }
+
+    #map-container {
+      display: flex;
+      flex: 1;
+      width: 100%;
+    }
+    #map-container {
+      width: 1480px;
+      height: 680px;
+    }
+
+
+    #viewDiv {
+        flex: 1;
+        height: 100px;
+
+    }
+    #viewDiv canvas {
+    width: 1100px !important;
+    height: 680px !important;
+    border-radius: 20px;
+    }
+    
+    #sidebar {
+      width: 310px;
+      height: 640px;
+      background-color: #000;
+      padding: 20px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    #sidebar h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .option {
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .option img {
+      width: 210px;
+      height: 162px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .option span {
+      display: block;
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .option:hover img {
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #3d5340;
+      width: 40%;
+      height: 70%;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal iframe {
+      flex: 1;
+      border: none;
+    }
+
+    .modal-header {
+      padding: 10px;
+      background-color: #597b5e;
+      color: white;
+      text-align: right;
+    }
+
+    .modal-header span {
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .avatar-preview {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 60px;         
+    margin-top: -10px; 
+    }     
+
+    
+  </style>
+</head>
+<body>
+  
+  <div id="navbar">
+    <div class="menu">
+      <a href="#" onclick="openModal('enlaces.html')">Enlaces</a>
+      <a href="#" onclick="openModal('datos_interesantes.html')">Datos Interesantes</a>
+      <div>
+        <a href="#">Ayuda</a>
+        <div class="dropdown">
+          <a href="#" onclick="openModal('faq.html')">Preguntas Frecuentes</a>
+          <a href="#" onclick="openModal('tutorial.html')">Guías y Tutoriales</a>
+          <a href="#" onclick="openModal('reportar.html')">Reportar un Problema</a>
+        </div>
+      </div>
+      <div>
+        <a href="#">Perfil</a>
+        <div class="dropdown" id="perfilUsuario">
+          <a href="#">
+            <div class="avatar-preview">
+              <img src="images/default-avatar.jpg" id="avatarUsuario" style="width: 60px; height: 60px; border-radius: 50%;">
+            </div>
+            <span id="nombreUsuario">Nombre Usuario</span>
+          </a>
+          <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div id="map-container">
+    
+    <div id="viewDiv"></div>
+
+    
+    <div id="sidebar">
+      <h2>----------</h2>
+      <a class="option" href="#" onclick="openModal('temperatura.html')">
+        <img src="images/temperatura3.png" alt="Temperatura">
+        <span>Temperatura</span>
+      </a>
+      <a class="option" href="#" onclick="openModal('deforestacion.html')">
+        <img src="images/deforestacion.jpg" alt="Deforestación">
+        <span>Deforestación</span>
+      </a>
+      <a class="option" href="#" onclick="openModal('glaciares.html')">
+        <img src="images/glaciares3.png" alt="Derretimiento de Glaciares">
+        <span>Derretimiento de Glaciares</span>
+      </a>
+      <a class="option" href="#" onclick="openModal('nivel-mar.html')">
+        <img src="images/nivel-mar2.png" alt="Aumento del Nivel del Mar">
+        <span>Aumento del Nivel del Mar</span>
+      </a>
+      <a class="option" href="#" onclick="openModal('otros-problemas.html')">
+        <img src="images/otros.jpg" alt="Otros Problemas">
+        <span>Otros Problemas</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span onclick="closeModal()">&times;</span>
+      </div>
+      <iframe id="modalFrame" src=""></iframe>
+    </div>
+  </div>
+
+  <script>
+    function openModal(page) {
+      const modal = document.getElementById('modal');
+      const frame = document.getElementById('modalFrame');
+      frame.src = page;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const frame = document.getElementById('modalFrame');
+      frame.src = '';
+      modal.style.display = 'none';
+    }
+  </script>
+
+<script>
+  require([
+    "esri/Map",
+    "esri/views/SceneView",
+    "esri/layers/FeatureLayer",
+    "esri/layers/TileLayer"
+  ], function (Map, SceneView, FeatureLayer, TileLayer) {
+
+    const satelliteLayer = new TileLayer({
+      url: "https://services.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer"
+    });
+
+    const labelsLayer = new TileLayer({
+      url: "https://services.arcgisonline.com/arcgis/rest/services/Reference/World_Boundaries_and_Places/MapServer",
+      opacity: 1.0
+    });
+
+    const map = new Map({
+      ground: "world-elevation",
+      layers: [satelliteLayer, labelsLayer] 
+    });
+
+    const view = new SceneView({
+      container: "viewDiv",
+      map: map,
+      center: [0, 0],
+      zoom: 2
+    });
+
+    
+    const countriesLayer = new FeatureLayer({
+      url: "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Countries_WGS84/FeatureServer/0",
+      outFields: ["*"], 
+      popupEnabled: false 
+    });
+
+    map.add(countriesLayer);
+
+    
+    const countryCoordinates = [
+     { name: "Ecuador", url: "ecuador.html", bounds: [-92, -5, -75, 2] },
+     { name: "Brazil", url: "brazil.html", bounds: [-74, -34, -34, 5] },
+     { name: "Mexico", url: "mexico.html", bounds: [-118, 14, -86, 32] },
+     { name: "United States", url: "EU.html", bounds: [-125, 24, -66, 49] },
+     { name: "Senegal", url: "senegal.html", bounds: [-18, 12, -11, 17] },
+     { name: "Thailand", url: "tailandia.html", bounds: [97, 5, 106, 21] },
+     { name: "Philippines", url: "filipinas.html", bounds: [116, 5, 127, 20] },
+     { name: "Australia", url: "australia.html", bounds: [113, -44, 154, -10] },
+     { name: "Spain", url: "españa.html", bounds: [-9, 36, 4, 44] },
+     { name: "Russia", url: "rusia.html", bounds: [27, 41, 190, 82] }
+   ];
+
+
+    
+    function getCountryFromCoordinates(longitude, latitude) {
+      return countryCoordinates.find(country =>
+        longitude >= country.bounds[0] && longitude <= country.bounds[2] &&
+        latitude >= country.bounds[1] && latitude <= country.bounds[3]
+      );
+    }
+
+    
+    view.on("click", function (event) {
+      view.hitTest(event).then(function () {
+        const mapPoint = event.mapPoint; 
+        const longitude = mapPoint.longitude;
+        const latitude = mapPoint.latitude;
+
+        const country = getCountryFromCoordinates(longitude, latitude);
+
+        if (country) {
+          
+          window.location.href = country.url;
+        } else {
+          alert("No hay información para esta ubicación.");
+        }
+      });
+    });
+   });
+</script>
+<script>
+  window.onload = function() {
+      const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+      if (usuario) {
+          const avatar = document.getElementById('avatarUsuario');
+          const nombreUsuario = document.getElementById('nombreUsuario');
+        
+          avatar.src = usuario.avatar;
+          
+          nombreUsuario.textContent = `${usuario.nombre} ${usuario.apellido}`;
+      } else {
+          window.location.href = 'index.html';
+      }
+  }
+  
+</script>
+<script>
+  function cerrarSesion() {
+      localStorage.removeItem('usuario');
+      
+      window.location.href = 'index.html';
+  }
+</script>
+
+
+
+
+</body>
+</html>
+
+  

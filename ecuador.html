@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas Climáticos del País</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #2C3E50;
+            color: white;
+            font-size: 2.5em;
+        }
+        .videos-section {
+            display: flex;
+            width: 1450px;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .video-item {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            border-radius: 15px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .problems{
+            display: flex;
+            width: 1465px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .problem-block {
+            flex: 1;
+            max-width: 280px;
+            margin: 0 40px;
+            text-align: center;
+        }
+        .info-rectangles {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info, .links {
+            background-color: #2C3E50;
+            color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 25px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .links {
+            background-color: #39398f;
+            padding: 30px;
+        }
+        .menu-vertical {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #2C3E50;
+            transition: width 0.3s;
+            z-index: 1000;
+        }
+        .menu-vertical:hover {
+            width: 600px;
+        }
+        .menu-contenido {
+            display: none;
+            padding: 20px;
+            background-color:rgb(129, 153, 174);
+            height: 100%;
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .menu-vertical:hover .menu-contenido {
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Problemas Climáticos del País
+    </header>
+
+    <section class="videos-section">
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5146.619234859297!2d-80.5255737930671!3d-2.4897557859253117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737515268207!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Temperatura</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d62636.15001397169!2d-78.06858780626509!3d-0.32715349237208474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1samazonia%20ecuador!5e1!3m2!1ses!2sec!4v1737256363385!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Deforestacion</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d158227.15627566056!2d-80.22803451268827!3d-3.205307835455671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737515509055!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Aumento del nivel del mar</h3>
+        </div>
+        <div class="video-item">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d22629.54143095744!2d-78.81280489855378!3d-1.4746190079611876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2sec!4v1737515690263!5m2!1ses!2sec" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                loading="lazy">
+            </iframe>
+            <h3>Derretimiento de glaciares</h3>
+        </div>
+    </section>
+
+    <section class="problems">
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Las temperaturas en Ecuador han aumentado en promedio 0.8 °C durante los últimos 60 años.</div>
+                <div class="info">El cambio de temperatura afecta la productividad agrícola, especialmente en cultivos sensibles como el café y el cacao.</div>
+                <div class="info">Los páramos, ecosistemas clave para el abastecimiento hídrico, enfrentan desecación debido al aumento de la temperatura.</div>
+                <div class="info">Las olas de calor son más frecuentes, afectando la salud de personas en zonas urbanas como Guayaquil y Quito.</div>
+                <div class="links">
+                    <a href="https://www.ejemplo.com/temperatura" target="_blank" style="color: white; text-decoration: none; background-color: #39398f; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+                        Más información sobre Temperatura
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Ecuador pierde anualmente cerca de 100,000 hectáreas de bosque, especialmente en la Amazonía y la región de la costa.</div>
+                <div class="info">La tala ilegal, la agricultura, la ganadería y las concesiones mineras son las principales causas de la deforestación.</div>
+                <div class="info">Los bosques amazónicos ecuatorianos, hogar de innumerables especies endémicas, están desapareciendo a un ritmo alarmante.</div>
+                <div class="info">La pérdida de bosques contribuye al 22% de las emisiones de gases de efecto invernadero en Ecuador.</div>
+                <div class="links">
+                    <a href="https://www.ejemplo.com/deforestacion" target="_blank" style="color: white; text-decoration: none; background-color: #39398f; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+                        Más información sobre Deforestación
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">El nivel del mar en las costas ecuatorianas sube a una tasa promedio de 2.6 mm por año, lo que aumenta el riesgo de inundaciones.</div>
+                <div class="info">Ciudades costeras como Guayaquil, Manta y Esmeraldas enfrentan erosión costera más severa y frecuente.</div>
+                <div class="info">Manglares y humedales en zonas como el Golfo de Guayaquil están siendo degradados por la intrusión de agua salada.</div>
+                <div class="info">Los fenómenos de El Niño, intensificados por el cambio climático, agravan las inundaciones en áreas bajas de la costa.</div>
+                <div class="links">
+                    <a href="https://www.ejemplo.com/aumento-nivel-mar" target="_blank" style="color: white; text-decoration: none; background-color: #39398f; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+                        Más información sobre Aumento del Nivel del Mar
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="problem-block">
+            <div class="info-rectangles">
+                <div class="info">Los glaciares ecuatorianos, como los del Chimborazo y el Antisana, han perdido más del 50% de su masa desde 1980.</div>
+                <div class="info">Solo quedan 7 glaciares principales en Ecuador, y muchos podrían desaparecer en las próximas décadas si las temperaturas continúan aumentando.</div>
+                <div class="info">La pérdida de glaciares afecta el suministro de agua para ciudades y comunidades rurales que dependen de ellos.</div>
+                <div class="info">El retroceso de glaciares afecta el turismo en áreas como el Cotopaxi, disminuyendo ingresos locales.</div>
+                <div class="links">
+                    <a href="https://www.ejemplo.com/derretimiento-glaciares" target="_blank" style="color: white; text-decoration: none; background-color: #39398f; padding: 10px 20px; border-radius: 5px; display: inline-block;">
+                        Más información sobre Derretimiento de Glaciares
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+      <div id="ia-container" style="position: fixed; bottom: 20px; right: 20px; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; max-width: 300px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <h3 style="margin: 0;">Datos Curiosos de Ecuador</h3>
+          <span id="close-ia" style="cursor: pointer; font-size: 18px; font-weight: bold; color: white;">&times;</span>
+        </div>
+        <p id="ia-content" style="font-size: 16px; margin-top: 10px;"></p>
+      </div>
+      
+      <script>
+        async function loadCuriosities(country) {
+          const response = await fetch('datos.json'); 
+          const data = await response.json();
+          const curiosities = data[country]?.curiosities || [];
+      
+          const iaContainer = document.getElementById('ia-container');
+          const iaContent = document.getElementById('ia-content');
+          let currentIndex = 0;
+      
+          function showNextCuriosity() {
+            iaContent.textContent = curiosities[currentIndex]; 
+            currentIndex = (currentIndex + 1) % curiosities.length; 
+        }
+          if (curiosities.length > 0) {
+            showNextCuriosity();
+            const intervalId = setInterval(showNextCuriosity, 5000); 
+      
+            
+            const closeButton = document.getElementById('close-ia');
+            closeButton.addEventListener('click', function () {
+              iaContainer.style.display = 'none'; 
+              clearInterval(intervalId); 
+            });
+          }
+        }
+      
+        
+        document.addEventListener('DOMContentLoaded', function () {
+          loadCuriosities('Ecuador');
+        });
+      </script>
+              
+</body>
+</html>

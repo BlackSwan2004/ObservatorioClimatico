@@ -1,0 +1,286 @@
+body, html { 
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #0f0f0f;
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+/* Sección principal (hero) */
+.hero {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    height: 500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.4); /* Fondo translúcido para mantener claridad */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: black; /* Color del texto principal */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Botones de llamado a la acción (CTA) */
+.cta {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background-color: navy; /* Color al pasar el mouse */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    color: black; 
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    margin-top: 20px;
+}
+
+.mission, .vision {
+    display: flex;
+    flex-direction: column; /* Coloca el título arriba del círculo */
+    align-items: center;
+    gap: 10px; /* Espacio entre el título y el círculo */
+}
+
+.mission-title, .vision-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: darkblue; /* Color del título */
+    text-align: center;
+}
+
+.mission-circle, .vision-circle {
+    background: #f0f0f0; /* Fondo gris claro */
+    color: rgb(130, 124, 148); /* Texto dentro del círculo */
+    border-radius: 100%; /* Forma de círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    font-size: 1.2em;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    background: #f0f0f0; /* Fondo gris claro para los elementos */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    color: black; /* Texto en negro */
+}
+
+/* Tarjetas */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #f9f9f9; /* Fondo gris claro */
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    color: black; /* Texto en negro */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #f0f0f0;
+    padding: 30px;
+    text-align: center;
+    color: darkblue; /* Texto del pie en azul oscuro */
+}
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Botón para cerrar el modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Contenedor de la imagen y el texto */
+.modal-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Imagen en el modal */
+.modal-details img {
+    width: 40%; /* La imagen ocupa el 40% del ancho */
+    border-radius: 8px;
+}
+
+/* Texto en el modal */
+#modal-text {
+    width: 60%; /* El texto ocupa el 60% del ancho */
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+}
+/* Contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Tarjeta individual */
+.card {
+    position: relative;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+/* Efecto de hover en la tarjeta */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro de la tarjeta */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+/* Descripción superpuesta */
+.card .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.card:hover .description {
+    opacity: 1;
+}
+
+.card:hover img {
+    opacity: 0.3; 
+}
+.subtitle {
+    font-size: 1.1rem; 
+    font-family: 'Cursive', 'Georgia', serif; 
+    font-style: bold; 
+    color: #343536; 
+    text-align: center; 
+    letter-spacing: 1px; 
+    margin-top: 10px; 
+}
+.title {
+    font-size: 2rem; 
+    font-family: 'Cursive', 'Georgia', serif; 
+    font-style: bold; 
+    color: #131313; 
+    text-align: center; 
+    letter-spacing: 1px; 
+    margin-top: 10px; 
+}
+
